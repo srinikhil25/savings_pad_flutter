@@ -1,0 +1,45 @@
+name: savings_pad
+description: "Savings Pad — track a monthly scholarship toward a savings goal, synced across devices."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Cloud backend (Lecture 08: Authentication, Lecture 09: Firestore).
+  # Versions match additional_sample_codes/firebase_app from the course.
+  firebase_core: ^4.0.0
+  firebase_auth: ^6.0.1
+  cloud_firestore: ^6.0.0
+
+  # State management (Lecture 04-05): a wrapper around InheritedWidget.
+  provider: ^6.1.5+1
+
+  # Locale-aware yen and date formatting (Lecture 06: package management).
+  intl: ^0.20.3
+
+  # On-device persistence for settings, so the app opens with the right
+  # goal even before Firestore has answered.
+  shared_preferences: ^2.5.5
+
+  # Lecture 07 (embedded devices): camera access for receipt photos.
+  # NOTE: the lecture notes flag a build failure with the `camera` plugin on
+  # the Android emulator (NDK component mismatch, 2026.07.30). image_picker
+  # delegates to the system camera app instead, so it is unaffected.
+  image_picker: ^1.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

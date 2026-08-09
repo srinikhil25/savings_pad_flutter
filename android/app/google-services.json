@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1046181180465",
+    "project_id": "savingspad",
+    "storage_bucket": "savingspad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046181180465:android:ad78d16a6987a542801110",
+        "android_client_info": {
+          "package_name": "jp.ac.shizuoka.inf.savings_pad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB01NdZ3woUaayKKJEH7Oku6XO2LWpIkK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
