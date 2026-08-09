@@ -4,8 +4,6 @@ Track a monthly scholarship toward a savings goal, synced across every device
 you sign in on. Built for Applied Programming, Faculty of Informatics,
 Shizuoka University.
 
-Presentation notes: **[PRESENTATION.md](PRESENTATION.md)**
-
 ## Two trackers, one rule
 
 1. **In the account** — the bank balance. Entered once, maintained from there.
@@ -79,15 +77,3 @@ Stored in Firestore as:
 users/{uid}/entries/{entryId}
 users/{uid}/settings/app
 ```
-
-## Notes on two deliberate choices
-
-**Offline is Firestore's job, not mine.** Firestore caches reads and queues
-writes on device, so there is no hand-written sync layer. Deletes are soft (a
-`deleted` flag) so a removal on one device reaches the others.
-
-**`image_picker`, not `camera`.** Lecture 07 records that the `camera` plugin
-fails to build on the Android emulator as of 2026.07.30 (NDK component
-mismatch). `image_picker` delegates to the system camera app and is unaffected.
-Receipts are downscaled and stored base64 in the entry document, with a size
-guard against the 1 MiB document limit.
